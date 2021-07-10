@@ -1,0 +1,45 @@
+features=[
+    "order_value", 
+    "order_items_count", 
+    "has_instruction", 
+    "has_phone_number", 
+    "has_call_instruction", 
+    "has_leave_instruction", 
+    "has_lift_instruction", 
+    "has_lobby_instruction", 
+    "has_gate_instruction", 
+    "has_knock_instruction", 
+    "has_bell_instruction", 
+    "created_timestamp_local_dayofweek", 
+    "created_timestamp_local_day", 
+    "created_timestamp_local_hour", 
+    "delivery_geohash_precision8_1", 
+    "delivery_geohash_precision8_2", 
+    "delivery_geohash_precision8_3", 
+    "delivery_geohash_precision8_4", 
+    "delivery_geohash_precision8_5", 
+    "delivery_geohash_precision8_6", 
+    "delivery_geohash_precision8_7", 
+    "delivery_geohash_precision8_8"
+    ]
+
+encode_features = [
+    "delivery_geohash_precision8_1", 
+    "delivery_geohash_precision8_2", 
+    "delivery_geohash_precision8_3", 
+    "delivery_geohash_precision8_4", 
+    "delivery_geohash_precision8_5", 
+    "delivery_geohash_precision8_6", 
+    "delivery_geohash_precision8_7", 
+    "delivery_geohash_precision8_8"
+]
+
+target="logistics_dropoff_distance"
+test_size=0.2
+
+[random_forest]
+n_estimators=300
+max_depth=30
+n_jobs=-1
+random_state=33
+bootstrap=false
